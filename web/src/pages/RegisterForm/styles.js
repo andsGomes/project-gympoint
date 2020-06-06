@@ -1,0 +1,120 @@
+import styled from 'styled-components';
+
+import 'react-datepicker/dist/react-datepicker.css';
+
+export const Container = styled.div`
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 30px 0;
+
+    div {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      height: 44px;
+      padding: 0 15px;
+      color: #666;
+      float: left;
+
+      &::placeholder {
+        color: #ddd;
+      }
+    }
+
+    select {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      height: 44px;
+      padding: 0 15px;
+      color: #666;
+      margin: 0 0 10px;
+      &::placeholder {
+        color: #ddd;
+      }
+    }
+    span {
+      color: #ed4c64;
+      align-self: flex-start;
+      margin: 0 0 10px;
+      font-weight: bold;
+    }
+    text {
+      color: #454545;
+      align-self: flex-start;
+      margin: 0 0 10px;
+      font-weight: bold;
+    }
+  }
+`;
+
+export const ListContainer = styled.div`
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+`;
+
+export const InputSmall = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  input {
+    width: 90%;
+    background-color: ${props => (props.disabled ? '#eee !important' : '#fff')};
+  }
+`;
+
+export const Row = styled.div`
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 0;
+`;
+
+export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 10px 25px;
+  background-color: ${props => props.backgroundColor};
+  color: #fff;
+  font-weight: 500;
+  margin: 0 10px;
+  cursor: pointer;
+  height: 40px;
+  justify-content: space-between;
+  text-transform: uppercase;
+  svg {
+    margin-right: 5px;
+  }
+  :hover {
+    opacity: 0.7;
+  }
+  :active {
+    border-style: none;
+  }
+`;
